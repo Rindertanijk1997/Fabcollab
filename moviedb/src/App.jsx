@@ -2,8 +2,10 @@ import './index.css'
 import './App.css'
 import Header from './components/header/Header'
 
+
 import HomePage from './pages/homepage/HomePage'
 import SingleMoviePage from './pages/singlemoviepage/SingleMoviePage'
+import SearchResultsPage from './pages/searchresultspage/SearchResultsPage'
 
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
       <Header/>
       <HomePage />
       <SingleMoviePage />
+      <SearchResultsPage />
     </div>
   )
 }
