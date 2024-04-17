@@ -8,7 +8,7 @@ function HomePage() {
     const [selectedMovie, setSelectedMovie] = useState(null); 
 
     useEffect(() => {
-        axios.get('https://santosnr6.github.io/Data/movies.json')
+        axios.get('https://santosnr6.github.io/Data/movies_long.json')
           .then(response => {
             const moviesData = response.data;
             if (moviesData) {
@@ -31,7 +31,7 @@ function HomePage() {
      console.log("Renderar filmer:", movies);
      return (
         <>
-            <h1 className='homePage-heading'>FAB COLLAB MOVIE TIPS!</h1>
+            <h1 className='homePage-heading'>Fab Collab Movie Tips</h1>
             <div className="homePage-container">
             {movies.map(movie => (
                 <div className='homePage-card' key={movie.imdbid}> 

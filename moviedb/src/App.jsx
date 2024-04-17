@@ -14,8 +14,12 @@ function App() {
     <div className="app">    
       <Header/>
       <HomePage />
+
       <SingleMoviePage />
       <SearchResultsPage />
+
+      {/* <SingleMoviePage /> */}
+
     </div>
   )
 }
