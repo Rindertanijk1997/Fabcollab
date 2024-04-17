@@ -1,9 +1,7 @@
 .homePage-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: .7rem;
     width: 100%;
-    background-color: #68904D;
 }
 
 .homePage-card {
@@ -11,13 +9,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: .25rem;
+    margin: 4rem 0 0 1rem;
     background-color: #fff;
     border-radius: 0.25rem;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     cursor: pointer;
     transition: all .5s ease-in-out;
-    
+    width: 90%;
 }
 
 .homePage-card:hover {
@@ -25,9 +23,10 @@
 }
 
 .homePage-heading {
+    font-size: 1.5rem;
     text-align: center;
-    margin: 5rem;
-    color: #333;
+    color: whitesmoke;
+    padding-top: 3rem;
 }
 
 .homePage-smallHeading {
