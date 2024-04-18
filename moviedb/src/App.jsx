@@ -2,10 +2,9 @@ import './index.css'
 import './App.css'
 import axios from 'axios'
 import useStore from './store';
-
 import Header from './components/header/Header'
 import HomePage from './pages/homepage/HomePage'
-import SingleMoviePage from './pages/singlemoviepage/SingleMoviePage'
+import Footer from './components/footer/Footer'
 
 function App() {
   const setMovie = useStore(state => state.setMovie);
@@ -23,6 +22,8 @@ function App() {
       <Header/>
       <HomePage onMovieClick={fetchMovie} />
       <SingleMoviePage />
+      <HomePage />
+      <Footer />
     </div>
   )
 }

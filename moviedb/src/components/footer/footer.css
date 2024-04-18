@@ -3,32 +3,78 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: rgb(3, 3, 3);
-    width: 100vh;
+    background-color: rgb(51,51,51);
     height: 200px;
     margin-top: 1.5rem;
     align-items: center;
 }
 
 .footer-links {
-    background-color: rgb(244,244,244);
+    background-color: rgb(233, 232, 232);
     border-radius: 1rem;
     border: 1px solid white;
     width: 300px;
     height: 100px;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
-.footer-link img {
+.footer-links img {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
-    max-width: 100%;
-    max-height: 100%;
 }
+
+.footer-links img:hover {
+    transform: scale(1.1);
+}
+
+.img-one,
+.img-two {
+    height: 50px;
+}
+
+.img-three {
+    height: 50px;
+}
+
 .footer-about {
-    background-color: rgb(244,244,244);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgb(233, 232, 232);
     border-radius: 1rem;
     border: 1px solid white;
     width: 300px;
     height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.footer-about h3 {
+    padding: 0.1rem;
+    letter-spacing: 3px;
+    font-size: 24px;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.footer-about p {
+    margin-top: 0.2rem;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+.footer-about aside {
+    display: flex;
+    align-items: center;
+}
+.flag {
+    margin-left: .5rem;
+    height: 10px;
+}
