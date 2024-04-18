@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './homepage.css';
 import Modal from '../../components/modal/Modal';
+import WatchlistPage from '../watchlistpage/WatchlistPage';
 
-function HomePage() {
+function HomePage({ onMovieClick }) {
     const [movies, setMovies] = useState([]); 
     const [selectedMovie, setSelectedMovie] = useState(null); 
 
@@ -21,24 +22,21 @@ function HomePage() {
 
     const openModal = (movie) => {
         setSelectedMovie(movie);
-        console.log("Öppnar modal för:", movie.title);
     };
 
     const closeModal = () => {
         setSelectedMovie(null);
     };
-     
-     console.log("Renderar filmer:", movies);
+
      return (
         <>
-            <h1 className='homePage-heading'>Fab Collab Movie Tips</h1>
-            <div className="homePage-container">
-            {movies.map(movie => (
-                <div className='homePage-card' key={movie.imdbid}> 
-                    
-                    <img className='homePage-img' src={movie.poster} alt={`Poster of ${movie.title}`} />
-                    <h3 className='homePage-smallHeading'>{movie.title}</h3>
-                    <div className="homePage-modal">
+        <h1 className='homePage-heading'>Fab Collab Movie Tips</h1>
+        <div className="homePage-container">
+          {movies.map(movie => (
+            <div className='homePage-card' key={movie.imdbid} onClick={() => onMovieClick(movie.imdbid)}>
+              <img className='homePage-img' src={movie.poster} alt={`Poster of ${movie.title}`} />
+              <h3 className='homePage-smallHeading'>{movie.title}</h3>
+              <div className="homePage-modal">
                         <button className='homePage-button' onClick={() => openModal(movie)}>Watch Trailer</button>
                     </div>
                 </div>

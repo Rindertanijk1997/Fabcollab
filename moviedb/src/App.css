@@ -3,7 +3,7 @@
   background-color: var(background-color);
   height: 100vh;
   margin: 0 auto;
-  background-image: url('src/assets/pexels-mnm-zameer-3308588.jpg');
+  background-image: url('src/assets/background.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%; 
 }

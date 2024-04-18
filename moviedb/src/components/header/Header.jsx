@@ -1,29 +1,29 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './header.css';
 import axios from 'axios';
-
+import { useNavigate } from 'react-router-dom';  
+import useStore from '../../store';
 
 function Header() {
+
+    const { searchMovies, searchResults } = useStore(state => ({
+        searchMovies: state.searchMovies,
+        searchResults: state.searchResults,
+        setMovie: state.setMovie
+    }));
+
     const [searchTerm, setSearchTerm] = useState('');
-    const [searchResults, setSearchResults] = useState([]);
     const [showDropdown, setShowDropdown] = useState(false);
     const dropdownRef = useRef(null);
+    const navigate = useNavigate();
+   
 
-    const handleSearch = () => {
-        const apiKey = 'be1d2151';
-        const url = `http://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(searchTerm)}`;
-    
-        axios.get(url)
-            .then(response => {
-                if (response.data.Search) {
-                    setSearchResults(response.data.Search);
-                    setShowDropdown(true);
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-    };
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
 
     const handleSelectMovie = (movie) => {
         setSearchTerm(movie.Title);
@@ -36,30 +36,41 @@ function Header() {
         }
     };
 
+    const handleSearch = () => {
+        searchMovies(searchTerm); 
+        setShowDropdown(true); 
+    };
+
     return (
         <header className='header'>
             <section className='header-title'>
-                <h1>Fab Collab Movie Database</h1>
-                <p>Movies for Everyone</p>
-            </section>
-            <section className='header-search'>
-                <label htmlFor="searchInput" className='header-label'></label>
-                <input
-                    className="searchInput"
-                    type="text"
-                    placeholder="Skriv här..."
-                    value={searchTerm}
-                    onChange={e => {
-                        setSearchTerm(e.target.value);
+            <h1>Fab Collab Movie Database</h1>
+            <p>Movies for Everyone</p>
+        </section>
+        <section className='header-search'>
+            <label htmlFor="searchInput" className='header-label'></label>
+            <input
+                className="searchInput"
+                type="text"
+                placeholder="Skriv här..."
+                value={searchTerm}
+                onChange={e => {
+                    setSearchTerm(e.target.value);
+                    if (e.target.value.length > 0) {
+                        handleSearch();
+                    } else {
                         setShowDropdown(false);
-                    }}
-                    onKeyDown={e => {
-                        if (e.key === 'Enter') {
-                            handleSearch();
-                        }
-                    }}
-                />
-                <button className='search-button' onClick={handleSearch}>Sök</button>
+                    }
+                }}
+                onKeyDown={e => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault(); // Förhindra att formuläret skickas om det är i ett formulär
+                        navigate(`/search-results?query=${encodeURIComponent(searchTerm)}`);
+                    }
+                }}
+                
+            />
+            <button className='search-button' onClick={handleSearch}>Sök</button>
 
                 {/* Dropdown */}
                 {showDropdown && (
