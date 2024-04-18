@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './header.css';
-import { useNavigate } from 'react-router-dom';  
+import { Link, useNavigate } from 'react-router-dom';  
 import useStore from '../../store';
 
 function Header() {
@@ -43,8 +43,9 @@ function Header() {
     return (
         <header className='header'>
             <section className='header-title'>
-            <h1>Fab Collab Movie Database</h1>
-            <p>Movies for Everyone</p>
+            <Link to="/" className='header-title' ><h1>Fab Collab Movie Database</h1>
+            <p>Movies for Everyone</p></Link>
+            
         </section>
         <section className='header-search'>
             <label htmlFor="searchInput" className='header-label'></label>
@@ -100,8 +101,9 @@ function Header() {
             </section>
 
             <section className='header-buttons'>
-                <button className='watchlist'>WatchList</button>
-                <button className='favorit'>Favorit</button>
+                <Link to="/watchlist-page" className='watchlist' >watchlist</Link>
+                <Link to="/favorits-page" className='favorit' >favorit</Link>
+                
             </section>
         </header>
     );
