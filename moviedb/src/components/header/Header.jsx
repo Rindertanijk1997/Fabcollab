@@ -1,33 +1,29 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './header.css';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-   
-
+import { useNavigate } from 'react-router-dom';  
+import useStore from '../../store';
 
 function Header() {
+
+    const { searchMovies, searchResults } = useStore(state => ({
+        searchMovies: state.searchMovies,
+        searchResults: state.searchResults,
+        setMovie: state.setMovie
+    }));
+
     const [searchTerm, setSearchTerm] = useState('');
-    const [searchResults, setSearchResults] = useState([]);
     const [showDropdown, setShowDropdown] = useState(false);
     const dropdownRef = useRef(null);
     const navigate = useNavigate();
    
 
-    const handleSearch = () => {
-        const apiKey = 'be1d2151';
-        const url = `http://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(searchTerm)}`;
-    
-        axios.get(url)
-            .then(response => {
-                if (response.data.Search) {
-                    setSearchResults(response.data.Search);
-                    setShowDropdown(true);
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-    };
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
 
     const handleSelectMovie = (movie) => {
         setSearchTerm(movie.Title);
@@ -38,6 +34,11 @@ function Header() {
         if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
             setShowDropdown(false);
         }
+    };
+
+    const handleSearch = () => {
+        searchMovies(searchTerm); 
+        setShowDropdown(true); 
     };
 
     return (
