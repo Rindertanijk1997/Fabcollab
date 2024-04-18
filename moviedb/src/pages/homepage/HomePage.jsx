@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './homepage.css';
 import Modal from '../../components/modal/Modal';
+import WatchlistPage from '../watchlistpage/WatchlistPage';
 
 function HomePage({ onMovieClick }) {
     const [movies, setMovies] = useState([]); 

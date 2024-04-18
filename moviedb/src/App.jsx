@@ -5,6 +5,7 @@ import useStore from './store';
 import Header from './components/header/Header'
 import HomePage from './pages/homepage/HomePage'
 import Footer from './components/footer/Footer'
+import WatchlistPage from './pages/watchlistpage/WatchlistPage'
 
 function App() {
   const setMovie = useStore(state => state.setMovie);
@@ -23,6 +24,7 @@ function App() {
       <HomePage onMovieClick={fetchMovie} />
       <SingleMoviePage />
       <HomePage />
+      <WatchlistPage /> 
       <Footer />
     </div>
   )
