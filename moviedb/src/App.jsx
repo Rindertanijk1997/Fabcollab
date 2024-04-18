@@ -3,6 +3,7 @@ import './App.css'
 import Header from './components/header/Header'
 import HomePage from './pages/homepage/HomePage'
 import Footer from './components/footer/Footer'
+import WatchlistPage from './pages/watchlistpage/WatchlistPage'
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <div className="app">    
       <Header/>
       <HomePage />
+      <WatchlistPage /> 
       <Footer />
     </div>
   )
