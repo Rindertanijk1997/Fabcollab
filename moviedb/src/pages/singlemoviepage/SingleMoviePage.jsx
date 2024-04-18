@@ -2,9 +2,10 @@ import './singlemoviepage.css';
 import React from 'react';
 import useStore from '../../store';
 
+
 function SingleMoviePage() {
   const movie = useStore(state => state.movie); //hämtar från store.js
-
+  
   if (!movie) {
     return <div>Loading...</div>;
   }

@@ -1,17 +1,9 @@
 import './searchresultspage.css'
-
-function SearchResultsPage() {
-  return (
-    <div>SearchResultsPage</div>
-  )
-}
-
-export default SearchResultsPage
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
-import './searchresultspage.css';  
+import './searchresultspage.css'; 
+
 
 function SearchResultsPage() {
     const [searchResults, setSearchResults] = useState([]);
