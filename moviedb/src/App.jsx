@@ -1,9 +1,8 @@
 import './index.css'
 import './App.css'
 import Header from './components/header/Header'
-
 import HomePage from './pages/homepage/HomePage'
-import SingleMoviePage from './pages/singlemoviepage/SingleMoviePage'
+import Footer from './components/footer/Footer'
 
 
 function App() {
@@ -12,7 +11,7 @@ function App() {
     <div className="app">    
       <Header/>
       <HomePage />
-      {/* <SingleMoviePage /> */}
+      <Footer />
     </div>
   )
 }
