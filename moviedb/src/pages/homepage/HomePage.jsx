@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './homepage.css';
 import Modal from '../../components/modal/Modal';
-import WatchlistPage from '../watchlistpage/WatchlistPage';
+
 
 function HomePage({ onMovieClick }) {
     const [movies, setMovies] = useState([]); 
@@ -13,7 +13,7 @@ function HomePage({ onMovieClick }) {
           .then(response => {
             const moviesData = response.data;
             if (moviesData) {
-                const randomMovies = moviesData.sort(() => Math.random() - 0.5).slice(0, 4);
+                const randomMovies = moviesData.sort(() => Math.random() - 0.5).slice(0, 8);
                 setMovies(randomMovies);
             }
         })
@@ -37,7 +37,9 @@ function HomePage({ onMovieClick }) {
               <img className='homePage-img' src={movie.poster} alt={`Poster of ${movie.title}`} />
               <h3 className='homePage-smallHeading'>{movie.title}</h3>
               <div className="homePage-modal">
+                        <img className='homePage-logo' src="src/assets/banner.png" alt="" />
                         <button className='homePage-button' onClick={() => openModal(movie)}>Watch Trailer</button>
+                        <img className='homePage-logo' src="src/assets/heart.png" alt="" />
                     </div>
                 </div>
             ))}
