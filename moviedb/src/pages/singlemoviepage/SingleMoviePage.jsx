@@ -16,6 +16,7 @@ function SingleMoviePage({ onMovieClick }) {
     return <div>Loading...</div>;
   }
 
+
   return (
     <div className='singlepage-wrapper'>
       <div className="left-section">
