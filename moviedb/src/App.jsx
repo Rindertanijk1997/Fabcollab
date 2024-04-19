@@ -4,7 +4,6 @@ import SingleMoviePage from './pages/singlemoviepage/SingleMoviePage';
 import SearchResultsPage from './pages/searchresultspage/SearchResultsPage';
 import './index.css'
 import './App.css'
-import axios from 'axios'
 import useStore from './store';
 import Header from './components/header/Header'
 import HomePage from './pages/homepage/HomePage'
@@ -12,15 +11,7 @@ import Footer from './components/footer/Footer'
 import WatchlistPage from './pages/watchlistpage/WatchlistPage'
 
 function App() {
-  const setMovie = useStore(state => state.setMovie);
-
-  const fetchMovie = (movieId) => {
-    axios.get(`http://www.omdbapi.com/?apikey=be1d2151&i=${movieId}`)
-      .then(response => {
-        setMovie(response.data); // Uppdaterar store.js med filmer
-      })
-      .catch(error => console.log('Error:', error));
-  };
+  const fetchMovie = useStore(state => state.fetchMovie)
 
   return (
     <Router>
@@ -28,7 +19,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage onMovieClick={fetchMovie} />} />
-          <Route path="/SingleMoviePage" element={<SingleMoviePage />} />
+          <Route path="/single-movie-page/:imdbId" element={<SingleMoviePage onMovieClick={fetchMovie} />} />
           <Route path="/search-results" element={<SearchResultsPage />} />
           <Route path="/watchlist-page" element={<WatchlistPage />} />
         </Routes>
