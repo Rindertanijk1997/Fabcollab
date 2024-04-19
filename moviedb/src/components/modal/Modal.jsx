@@ -18,8 +18,16 @@ function Modal({ movie, isOpen, closeModal }) {
                     height="400px"
                 ></iframe>
                 <article className='modal-btn__container'>
-                <button className='modal-buttons'>Add To Watchlist</button>
-                <button className='modal-buttons'>Add To Favorites</button>
+                    <article className='homePage-logo__container'>
+                        <img className='homePage-logo' src="src/assets/banner.png" alt="" />
+                        <p>Add to watchlist</p>
+                    </article>
+
+                    <article className='homePage-logo__container'>
+                        <p>Add to favorites</p>
+                        <img className='homePage-logo' src="src/assets/heart.png" alt="" />
+                        </article>  
+
                 </article>
             </div>
         </div>

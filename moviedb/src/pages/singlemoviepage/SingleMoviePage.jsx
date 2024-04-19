@@ -1,6 +1,7 @@
 import './singlemoviepage.css'
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import './singlemoviepage.css';
 import useStore from '../../store';
 
 function SingleMoviePage({ onMovieClick }) {
