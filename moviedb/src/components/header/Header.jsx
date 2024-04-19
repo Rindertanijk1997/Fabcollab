@@ -23,51 +23,46 @@ function Header() {
 
 
     const handleSearch = () => {
-        searchMovies(searchTerm); 
-        
+        if (searchTerm.trim()) { 
+            console.log("Sökterm:", searchTerm); 
+            searchMovies(searchTerm);
+            const queryUrl = `/search-results?query=${encodeURIComponent(searchTerm)}`;
+            console.log("Navigerar till:", queryUrl); 
+            navigate(queryUrl);
+        } 
     };
 
     return (
         <header className='header'>
             <section className='header-title'>
-            <Link to="/" className='header-title' ><h1>Fab Collab Movie Database</h1>
-            <p>Movies for Everyone</p></Link>
-            
-        </section>
-        <section className='header-search'>
-            <label htmlFor="searchInput" className='header-label'></label>
-            <input
-                className="searchInput"
-                type="text"
-                placeholder="Skriv här..."
-                value={searchTerm}
-                onChange={e => {
-                    setSearchTerm(e.target.value);
-                    if (e.target.value.length > 0) {
-                        handleSearch();
-                    } else {
-                        setShowDropdown(false);
-                    }
-                }}
-                onKeyDown={e => {
-                    if (e.key === 'Enter') {
-                        e.preventDefault(); // Förhindra att formuläret skickas om det är i ett formulär
-                        navigate(`/search-results?query=${encodeURIComponent(searchTerm)}`);
-                    }
-                }}
-                
-            />
-            <button className='search-button' onClick={handleSearch}>Sök</button>
-    
+                <Link to="/" className='header-title'>
+                    <h1>Fab Collab Movie Database</h1>
+                    <p>Movies for Everyone</p>
+                </Link>
             </section>
-
+            <section className='header-search'>
+                <input
+                    className="searchInput"
+                    type="text"
+                    placeholder="Skriv här..."
+                    value={searchTerm}
+                    onChange={e => setSearchTerm(e.target.value)}
+                    onKeyDown={e => {
+                        if (e.key === 'Enter') {
+                            e.preventDefault(); // Förhindrar att formuläret skickas
+                            handleSearch();
+                        }
+                    }}
+                />
+                <button className='search-button' onClick={handleSearch}>Sök</button>
+            </section>
             <section className='header-buttons'>
-                <Link to="/watchlist-page" className='watchlist' >watchlist</Link>
-                <Link to="/favorits-page" className='favorit' >favorit</Link>
-                
+                <Link to="/watchlist-page" className='watchlist'>watchlist</Link>
+                <Link to="/favorits-page" className='favorit'>favorit</Link>
             </section>
         </header>
     );
+      
 }
 
 export default Header;
