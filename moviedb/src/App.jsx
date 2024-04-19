@@ -20,7 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage onMovieClick={fetchMovie} />} />
           <Route path="/single-movie-page/:imdbId" element={<SingleMoviePage onMovieClick={fetchMovie} />} />
-          <Route path="/search-results" element={<SearchResultsPage />} />
+          <Route path="/search-results" element={<SearchResultsPage onMovieClick={fetchMovie} />} />
           <Route path="/watchlist-page" element={<WatchlistPage />} />
         </Routes>
         <Footer />
