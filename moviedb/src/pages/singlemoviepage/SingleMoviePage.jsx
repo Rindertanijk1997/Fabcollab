@@ -18,10 +18,20 @@ function SingleMoviePage({ onMovieClick }) {
 
   return (
     <div className='singlepage-wrapper'>
+      <div className="left-section">
       <h1 className='movie-info__title'>{movie.Title}</h1>
-      <button className='back-btn'>Back</button>
       <img className='movie-img' src={movie.Poster} alt="Filmlogga" />
-      <p className='movie-description'>{movie.Plot}</p>
+      </div>
+      <div className="right-section">
+      <p className='movie-description'>Rating: {movie.imdbRating}</p> 
+      <p className='movie-description'>Year: {movie.Year}</p> 
+      <p className='movie-description'>Runtime: {movie.Runtime}</p>
+      <p className='movie-description'>Director: {movie.Director}</p>  
+      <p className='movie-description'>Released: {movie.Released}</p>   
+      <p className='movie-description'>Genre: {movie.Genre}</p>
+      <p className='movie-description'>Actors: {movie.Actors}</p>  
+      <p className='movie-description'>Plot: {movie.Plot}</p>
+      </div>
     </div>
   );
 }
