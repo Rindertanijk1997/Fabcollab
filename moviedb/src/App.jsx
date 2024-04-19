@@ -9,6 +9,7 @@ import Header from './components/header/Header'
 import HomePage from './pages/homepage/HomePage'
 import Footer from './components/footer/Footer'
 import WatchlistPage from './pages/watchlistpage/WatchlistPage'
+import FavoritesPage from './pages/favoritespage/FavoritesPage';
 
 function App() {
   const fetchMovie = useStore(state => state.fetchMovie)
@@ -22,6 +23,7 @@ function App() {
           <Route path="/single-movie-page/:imdbId" element={<SingleMoviePage onMovieClick={fetchMovie} />} />
           <Route path="/search-results" element={<SearchResultsPage onMovieClick={fetchMovie} />} />
           <Route path="/watchlist-page" element={<WatchlistPage />} />
+          <Route path="/favorite-page" element={<FavoritesPage />} />
         </Routes>
         <Footer />
       </div>

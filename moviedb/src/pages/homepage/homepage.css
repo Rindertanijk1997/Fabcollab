@@ -70,17 +70,6 @@
     text-decoration: none;
 }
 
-  .homePage-logo {
-    cursor: pointer;
-    height: 30px;
-    
-  }
-
-  .homePage-logo:hover {
-    transform: scale(1.1);
-  }
-
-
   .homePage-modal {
     display: flex;
     justify-content: space-around;

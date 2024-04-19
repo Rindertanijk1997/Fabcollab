@@ -1,22 +1,26 @@
 import './watchlistpage.css'
+import useStore from '../../store';
 
 function WatchlistPage() {
-  return (
-<section className='watchlist-wrapper'>
+    const watchlist = useStore(state => state.watchlist); // Hämta watchlist från store.js
+
+    return (
+        <section className='watchlist-wrapper'>
             <article className='watchlist-title'>
-                <h1>Watchlist</h1>
+                <h1>Movies to watch</h1>
             </article>
             <article className='watchlist-container'>
-                <article className='watchlist-box'>
-                    <h2 className='watchlist-box__title'></h2>
-                    <h3 className='watchlist-box__year'></h3>
-                    <p className='watchlist-box__plot'></p>
-                    <p className='watchlist-box__genre'></p>
-                    <p className='watchlist-box__actors'></p>
-                </article>
+                {watchlist.map(movie => (
+                    <article key={movie.imdbID} className='watchlist-box'>
+                        <img src={movie.Poster} alt={movie.Title} className='watchlist-box__poster' />
+                        <h2 className='watchlist-box__title'>{movie.Title}</h2>
+                        <h3 className='watchlist-box__year'>{movie.Year}</h3>
+                        {/* Add other movie details you want to display */}
+                    </article>
+                ))}
             </article>
         </section>
-  )
+    )
 }
 
 export default WatchlistPage

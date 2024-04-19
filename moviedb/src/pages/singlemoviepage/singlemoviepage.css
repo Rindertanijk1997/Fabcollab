@@ -44,6 +44,7 @@ font-size: 16px;
 .left-section {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -59,6 +60,16 @@ font-size: 16px;
 }
 
 .movie-img {
+    margin-top: 1rem;
+}
+
+.movie-description {
+    font-size: 18px;
+    color: white;
+    width: 300px;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+}
     border: solid yellow 1px;
     width: 300px; 
     height: auto; 
