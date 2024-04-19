@@ -10,7 +10,6 @@ function HomePage() {
 
     useEffect(() => {
         axios.get('https://santosnr6.github.io/Data/movies_long.json')
-
             .then(response => {
                 const moviesData = response.data;
                 if (moviesData) {
@@ -19,16 +18,6 @@ function HomePage() {
                 }
             })
             .catch(error => console.log(error));
-
-          .then(response => {
-            const moviesData = response.data;
-            if (moviesData) {
-                const randomMovies = moviesData.sort(() => Math.random() - 0.5).slice(0, 8);
-                setMovies(randomMovies);
-            }
-        })
-        .catch(error => console.log(error));
-
     }, []);
 
     const openModal = (movie) => {
@@ -50,18 +39,10 @@ function HomePage() {
                             <h3 className='homePage-smallHeading'>{movie.title}</h3>
                         </Link>
                         <div className="homePage-modal">
+                            <img className='homePage-logo' src="src/assets/banner.png" alt="" />
                             <button className='homePage-button' onClick={() => openModal(movie)}>Watch Trailer</button>
-
-        <h1 className='homePage-heading'>Fab Collab Movie Tips</h1>
-        <div className="homePage-container">
-          {movies.map(movie => (
-            <div className='homePage-card' key={movie.imdbid} onClick={() => onMovieClick(movie.imdbid)}>
-              <img className='homePage-img' src={movie.poster} alt={`Poster of ${movie.title}`} />
-              <h3 className='homePage-smallHeading'>{movie.title}</h3>
-              <div className="homePage-modal">
-                        <img className='homePage-logo' src="src/assets/banner.png" alt="" />
-                        <button className='homePage-button' onClick={() => openModal(movie)}>Watch Trailer</button>
-                        <img className='homePage-logo' src="src/assets/heart.png" alt="" />
+                            <img className='homePage-logo' src="src/assets/heart.png" alt="" />
+                        </div>
                     </div>
                 ))}
             </div>
