@@ -70,11 +70,11 @@ font-size: 16px;
     margin-top: 1rem;
     letter-spacing: 1px;
 }
-    border: solid yellow 1px;
+    /* border: solid yellow 1px;
     width: 300px; 
     height: auto; 
     margin: 1rem 0 1rem 2rem;
-}
+} */
 
 .right-section {
     align-self: end;
