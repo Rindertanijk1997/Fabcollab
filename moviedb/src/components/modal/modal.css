@@ -15,7 +15,7 @@
 .modal-content {
   padding: 20px;
   width: 700px;
-  background-color: #222;
+  background-color: #808080;
   border-radius: 0.25rem;
 }
 
@@ -42,23 +42,25 @@
 
 .modal-btn__container {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
 }
 
-.modal-buttons {
-  cursor: pointer;
+.homePage-logo__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin-top: 1rem;
-  padding: 0.4rem;
-  height: 30px;
-  border-radius: 0.25rem;
-  color: rgb(0, 0, 0);
-  background-color: rgb(230, 255, 1);
-  letter-spacing: 1px;
-  font-weight: 600;
-  transition: transform 0.2s;
 }
 
-.modal-buttons:active {
-  transform: translateY(2px);
+.homePage-logo__container p {
+  cursor: pointer;
+  color: yellow;
+  font-size: 22px;
+  font-weight: 500;
+  padding: 0.5rem;
 }
+
+.homePage-logo__container:hover {
+  transform: scale(1.1);
+}
+
