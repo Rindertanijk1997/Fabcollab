@@ -19,8 +19,8 @@ function SearchResultsPage() {
             <div className="movie-list">
                 {searchResults.map(movie => (
                     <div key={movie.imdbID} className="movie-card">
-                        <Link to={`/movie/${movie.imdbID}`} className="movie-link">
-                            <img src={movie.Poster} alt={movie.Title} className="movie-poster" />
+                        <Link className="movie-link" to={`/single-movie-page/${movie.imdbID}`}>              
+                            <img src={movie.Poster} alt={movie.Title} className="movie-poster" />   
                             <h3 className="movie-title">{movie.Title}</h3>
                             <p className="movie-year">{movie.Year}</p>
                         </Link>
