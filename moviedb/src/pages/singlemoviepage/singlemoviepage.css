@@ -6,10 +6,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .movie-info__title {
-    font-family:'Times New Roman', Times, serif;
     text-align: center;
     font-weight: 700;
     font-size: 46px;
@@ -19,24 +19,12 @@
 
 .movie-img {
     margin-top: 1rem;
-    background-color: rgb(146, 143, 143);
-    width: 250px;
-    height: 250px;
 }
 
 .movie-description {
-    background-color: rgb(161, 179, 179);
-    width: 100%;
-    height: 375px;
-}
-
-.back-btn {
     font-size: 18px;
-    font-family:'Times New Roman', Times, serif;
-    color: yellow;
-    background-color: black;
-    width: 100px;
-    height: auto;
-    border-radius: var(border-radius);
-    cursor: pointer;
+    color: white;
+    width: 300px;
+    margin-top: 1rem;
+    letter-spacing: 1px;
 }

@@ -1,0 +1,22 @@
+.favorite-title {
+    margin-top: 1rem;
+    color: yellow;
+    font-size: 48px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+
+.favorite-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+    width: 100%;
+    place-items: center;
+}
+
+.favorite-box {
+    height: auto;
+    width: 300px;
+    background-color: rgb(198, 205, 205);
+}

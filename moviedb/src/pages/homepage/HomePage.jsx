@@ -39,9 +39,7 @@ function HomePage() {
                             <h3 className='homePage-smallHeading'>{movie.title}</h3>
                         </Link>
                         <div className="homePage-modal">
-                            <img className='homePage-logo' src="src/assets/banner.png" alt="" />
                             <button className='homePage-button' onClick={() => openModal(movie)}>Watch Trailer</button>
-                            <img className='homePage-logo' src="src/assets/heart.png" alt="" />
                         </div>
                     </div>
                 ))}

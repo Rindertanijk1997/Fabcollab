@@ -19,7 +19,6 @@ function SingleMoviePage({ onMovieClick }) {
   return (
     <div className='singlepage-wrapper'>
       <h1 className='movie-info__title'>{movie.Title}</h1>
-      <button className='back-btn'>Back</button>
       <img className='movie-img' src={movie.Poster} alt="Filmlogga" />
       <p className='movie-description'>{movie.Plot}</p>
     </div>

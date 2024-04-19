@@ -45,22 +45,3 @@
   justify-content: space-around;
 }
 
-.homePage-logo__container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 1rem;
-}
-
-.homePage-logo__container p {
-  cursor: pointer;
-  color: yellow;
-  font-size: 22px;
-  font-weight: 500;
-  padding: 0.5rem;
-}
-
-.homePage-logo__container:hover {
-  transform: scale(1.1);
-}
-

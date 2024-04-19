@@ -4,6 +4,8 @@ import { create } from 'zustand';
 const useStore = create((set) => ({
   movie: null,
   searchResults: [],
+  watchlist: [],
+  favoritelist: [],
   setMovie: (movieData) => set({ movie: movieData }),
   setSearchResults: (results) => set({ searchResults: results }),
 
@@ -27,6 +29,26 @@ const useStore = create((set) => ({
       })
       .catch(error => console.error('Error:', error));
   },
+
+  addToWatchlist: (movie) => {
+    set(state => ({
+      watchlist: [...state.watchlist, movie]
+    }));
+  },
+
+  getWatchlist: () => {
+    return useStore.getState().watchlist;
+  },
+
+  addToFavoritelist: (movie) => {
+    set(state => ({
+      favoritelist: [...state.favoritelist, movie]
+    }));
+  },
+
+  getFavoritelist: () => {
+    return useStore.getState().favoritelist;
+  }
 }));
 
 export default useStore;
