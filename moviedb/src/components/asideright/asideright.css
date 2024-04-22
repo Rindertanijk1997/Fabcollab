@@ -1,0 +1,30 @@
+.aside-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 120px;
+    position: absolute;
+    right: 0;
+    margin-right: 5rem;
+}
+
+.aside-container h3 {
+    color: white;
+    font-size: 34px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.aside-right{
+    gap: 2rem;
+}
+.aside-logo {
+    margin-right: 11rem;
+    border-radius: 1rem;
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
