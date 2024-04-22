@@ -6,74 +6,7 @@ background-color: #333;
 color: beige;
 display: flex;
 flex-direction: row;
-justify-content: space-between;
+justify-content: space-around;
 align-items: center;
-}
-
-.header-title{
-    margin: 2rem;
-    color: whitesmoke;
-    text-align: center;
-    text-decoration: none;
-}
-
-.header-title h1{
-    font-size: 1.8rem;
-}
-
-.header-title p{
-    font-size: 1rem;
-}
-
-.header-search{
-    display: flex;
-    text-align: center;
-    position: relative;
-}
-
-.searchInput{
-    width: 350px;
-    height: 40px;
-    padding-left: 10px;
-    border-top-left-radius: .25rem;
-    border-bottom-left-radius: .25rem;
-    border: none;
-}
-
-.search-button{
-    height: 40px;
-    width: 100px;
-    background-color: #555;
-    color: whitesmoke;
-    font-weight: 600;
-    font-size: 1rem;
-    border-top-right-radius: .25rem;
-    border-bottom-right-radius: .25rem;
-    border: none;
-    cursor: pointer;
-}
-
-
-.header-buttons{
-  margin-right: 3rem;
-
-}
-
-.watchlist{
-    font-size: 1.2rem;
-    background-color: #333;
-    color: whitesmoke;
-    border: none;
-    cursor: pointer;
-    margin-right: 1.5rem;
-    text-decoration: none;
-}
-
-.favorit{
-    font-size: 1.2rem;
-    background-color: #333;
-    color: whitesmoke;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
+text-align: center;
 }
