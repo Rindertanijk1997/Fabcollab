@@ -1,0 +1,30 @@
+.aside-right__container {
+
+}
+
+.aside-right__title {
+    font-size: 22px;
+    margin-top: 1rem;
+    text-align: center;
+    color: white;
+}
+
+.logos img {
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+    height: 60px;
+    border-radius: 0.5rem;
+    margin-top: 0.1rem;
+}
+
+.logos img:hover {
+    transform: scale(1.1);
+}
+
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
