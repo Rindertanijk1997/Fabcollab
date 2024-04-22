@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function PageCard({ movie, openModal }) {
   return (
 
-    <div class="page-container">
+    <div className="page-container">
     <div className='page-card' key={movie.imdbid}>
       <Link className='pagecard-link' to={`/single-movie-page/${movie.imdbid}`}>
         <img className='page-img' src={movie.poster} alt={`Poster of ${movie.title}`} />
