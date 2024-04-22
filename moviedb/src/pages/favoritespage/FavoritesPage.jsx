@@ -1,8 +1,15 @@
 import './favoritespage.css'
+import useStore from '../../store';
+import { useEffect } from 'react'
 
 function FavoritesPage() {
     const favoritelist = useStore(state => state.favoritelist); // Hämta watchlist från store.js
 
+    useEffect (() => {
+        console.log(favoritelist)
+    }, [])
+
+    
     return (
         <section className='favorite-wrapper'>
             <article className='favorite-title'>
