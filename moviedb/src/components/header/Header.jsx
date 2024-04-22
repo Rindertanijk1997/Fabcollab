@@ -58,7 +58,7 @@ function Header() {
             </section>
             <section className='header-buttons'>
                 <Link to="/watchlist-page" className='watchlist'>watchlist</Link>
-                <Link to="/favorits-page" className='favorit'>favorit</Link>
+                <Link to="/favorite-page" className='favorit'>favorit</Link>
             </section>
         </header>
     );
