@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './homepage.css';
 import Modal from '../../components/modal/Modal';
-import { Link } from 'react-router-dom';
+import HomePageCard from '../../components/pagecard/PageCard';
+
 
 function HomePage() {
     const [moviesData, setMoviesData] = useState([]);
@@ -33,15 +34,7 @@ function HomePage() {
             <h1 className='homePage-heading'>Fab Collab Movie Tips</h1>
             <div className="homePage-container">
                 {moviesData.map(movie => (
-                    <div className='homePage-card' key={movie.imdbid}>
-                        <Link className='homepage-link' to={`/single-movie-page/${movie.imdbid}`}>
-                            <img className='homePage-img' src={movie.poster} alt={`Poster of ${movie.title}`} />
-                            <h3 className='homePage-smallHeading'>{movie.title}</h3>
-                        </Link>
-                        <div className="homePage-modal">
-                            <button className='homePage-button' onClick={() => openModal(movie)}>Watch Trailer</button>
-                        </div>
-                    </div>
+                    <HomePageCard key={movie.imdbid} movie={movie} openModal={openModal} />
                 ))}
             </div>
             <Modal movie={selectedMovie} isOpen={!!selectedMovie} closeModal={closeModal} />

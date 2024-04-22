@@ -10,17 +10,12 @@
 }
 
 .footer-links {
-    background-color: rgb(233, 232, 232);
-    border-radius: 1rem;
-    border: 1px solid white;
     width: 300px;
     height: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    border: 1px solid black;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .footer-links img {
     cursor: pointer;
@@ -42,33 +37,26 @@
 }
 
 .footer-about {
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-    border: 1px solid black;
-    text-align: center;
-    background-color: rgb(233, 232, 232);
-    border-radius: 1rem;
-    border: 1px solid white;
     width: 300px;
     height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
 }
 
 .footer-about h3 {
     padding: 0.1rem;
     letter-spacing: 3px;
     font-size: 24px;
-    font-style: italic;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer-about p {
     margin-top: 0.2rem;
     font-size: 16px;
     letter-spacing: 1px;
-    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
 }
 .footer-about aside {
     display: flex;
