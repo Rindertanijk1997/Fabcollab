@@ -5,8 +5,7 @@
   
   .watchlist{
       font-size: 1.2rem;
-      background-color: #333;
-      color: whitesmoke;
+      color: #e3d4bc;
       border: none;
       cursor: pointer;
       margin-right: 2rem;
@@ -15,8 +14,7 @@
   
   .favorit{
       font-size: 1.2rem;
-      background-color: #333;
-      color: whitesmoke;
+      color: #e3d4bc;
       border: none;
       cursor: pointer;
       text-decoration: none;
