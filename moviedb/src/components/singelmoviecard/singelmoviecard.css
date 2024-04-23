@@ -18,7 +18,7 @@
   background: transparent;
 }
 
-.card_left img {
+.card_left .movie-img {
   width: 100%;
   height: auto;
   border-radius: 10px 0 0 10px;
@@ -28,7 +28,7 @@
 .card_right {
   width: 60%;
   float: left;
-  background: #000000;
+  background: #333;
   height: 470px;
   border-radius: 0 10px 10px 0;
 }
@@ -77,5 +77,16 @@
 
 .movie-logo:hover {
   transform: scale(1.1);
+}
+
+.card_right__logo .ul-logo {
+  list-style-type: none;
+  padding: 0 0 0 2.4rem;
+  margin: 1rem 0 0 0;
+}
+
+.card_right__logo .ul-logo .li-logo {
+  display: inline;
+  padding: 0 1.2rem 0 0;
 }
 

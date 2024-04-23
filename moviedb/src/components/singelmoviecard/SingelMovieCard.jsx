@@ -1,5 +1,7 @@
 import './singelmoviecard.css';
 import useStore from '../../store';
+import banner from '../../assets/banner.png';
+import heart from '../../assets/heart.png';
 
 
 function SingelMovieCard({ movie }) {
@@ -24,13 +26,13 @@ function SingelMovieCard({ movie }) {
                 <div className="card_right__plot">
                     <p className='movie-description'>{movie.Plot}</p>
                 </div>
-                <div className="card_right__details">
-                <ul>
-                    <li>
-                        <img className='movie-logo' src="src/assets/banner.png" onClick={() => addToWatchlist(movie)} alt="" />
+                <div className="card_right__logo">
+                <ul className='ul-logo'>
+                    <li className='li-logo'>
+                    <img className='movie-logo' src={banner} onClick={() => addToWatchlist(movie)} alt="Banner" />
                     </li>
-                    <li>
-                        <img className='movie-logo' src="src/assets/heart.png" onClick={() => addToFavorites(movie)} alt="" />
+                    <li className='li-logo'>
+                        <img className='movie-logo' src={heart} onClick={() => addToFavorites(movie)} alt="Heart" />
                     </li> 
                 </ul>
                 </div>
