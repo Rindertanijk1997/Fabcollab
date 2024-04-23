@@ -17,7 +17,7 @@ function SearchResultsPage() {
 
     return (
         <div className="search-results">
-            <h2 className='searchlist__title'>Search Results for</h2>
+            <h2 className='searchlist__title'>Searchresults for</h2>
             <div className="movie-list">
                 {searchResults.map(movie => (
                     <div key={movie.imdbID} className="movie-card">

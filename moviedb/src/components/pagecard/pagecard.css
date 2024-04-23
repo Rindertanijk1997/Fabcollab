@@ -8,7 +8,7 @@
   background-color: #2c2c30;
   transition: all .5s ease-in-out;
   width: 300px;
-  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.3);
   margin: auto;
 }
 
