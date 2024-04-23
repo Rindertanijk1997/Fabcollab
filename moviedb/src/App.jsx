@@ -11,6 +11,7 @@ import Footer from './components/footer/Footer'
 import WatchlistPage from './pages/watchlistpage/WatchlistPage'
 import FavoritesPage from './pages/favoritespage/FavoritesPage';
 import AsideRight from './components/asideright/AsideRight';
+import Animation from './components/animation/Animation';
 
 function App() {
   const fetchMovie = useStore(state => state.fetchMovie)
@@ -20,6 +21,7 @@ function App() {
       <div className="app">
         <Header />
         <AsideRight />
+        <Animation />
         <Routes>
           <Route path="/" element={<HomePage onMovieClick={fetchMovie} />} />
           <Route path="/single-movie-page/:imdbId" element={<SingleMoviePage onMovieClick={fetchMovie} />} />
