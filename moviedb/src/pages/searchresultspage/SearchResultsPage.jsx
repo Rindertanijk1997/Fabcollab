@@ -28,7 +28,7 @@ function SearchResultsPage() {
                         </Link>
                         <article className='search-logo__container'>
                             <img className='searchPage-logo'  src="src/assets/banner.png" onClick={() => addToWatchlist(movie)} alt="" />
-                            <img className='searchPage-logo'  src="src/assets/heart.png" onClick={() => addToFavorites(movie)} alt="" />
+                            <img className='searchPage-logo logoheart'  src="src/assets/heart.png" onClick={() => addToFavorites(movie)} alt="" />
                         </article>
                     </div>
                 ))}

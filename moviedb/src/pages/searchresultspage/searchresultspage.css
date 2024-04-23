@@ -13,16 +13,24 @@
     gap: 1rem;
 }
 
+.movie-list img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
 .search-logo__container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+    margin-left: .5rem;
 }
 
 .movie-card {
+    border-radius: 10px;
     height: auto;
     width: 300px;
     background-color: rgb(47,47,54);
@@ -64,6 +72,10 @@
     margin-bottom: 0.5rem;
 }
 
+.logoheart {
+    margin-left: .7rem;
+}
+
 .searchPage-logo :visited {
     color: aliceblue;
 }
@@ -75,6 +87,10 @@
 .movie-poster {
     width: 100%;
     height: 470px;
+}
+
+a {
+    text-decoration: none;
 }
 
 @media screen and (max-width: 1100px) {
