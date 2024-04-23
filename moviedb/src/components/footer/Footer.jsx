@@ -6,13 +6,13 @@ function Footer() {
 
       <article className='footer-links'>
         <a href="https://www.omdbapi.com/">
-          <img className='img-one' src="src/assets/omdbapi.png" alt="ikon" />
+          <img className='img-one' src="src/assets/omdbapi.png" alt="logo" />
         </a>
         <a href="https://www.filmstaden.se/karlstad/?date=2024-04-18">
-          <img className='img-two' src="src/assets/filmstaden.png" alt="ikon" />
+          <img className='img-two' src="src/assets/filmstaden.png" alt="logo" />
         </a>
-        <a href="http://www.youtube.com">
-          <img className='img-three' src="src/assets/youtube-ikon.png" alt="ikon" />
+        <a href="https://www.youtube.com/watch?v=wg_AuKmgj5I">
+          <img className='img-three' src="src/assets/youtube-ikon.png" alt="logo" />
         </a>
       </article>
 

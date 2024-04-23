@@ -6,9 +6,8 @@
 }
 
 .logos img {
-    animation: waterfall 10s linear infinite;
     width: auto;
-    height: 60px;
+    height: 70px;
     border-radius: 0.5rem;
     margin-top: 0.1rem;
 }
@@ -21,5 +20,5 @@
 .logos {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
