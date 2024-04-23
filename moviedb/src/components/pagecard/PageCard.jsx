@@ -1,7 +1,9 @@
 import './pagecard.css'
 import { Link } from 'react-router-dom';
 
+
 function PageCard({ movie, openModal }) {
+
   return (
 
     <div className="page-container">
