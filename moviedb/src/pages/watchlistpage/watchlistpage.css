@@ -1,0 +1,40 @@
+
+.watchlist-title {
+    margin-top: 1rem;
+    color: #e3d4bc;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.watchlist-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 100%;
+    width: 100%;
+    place-items: center;
+}
+
+.watchlist-box {
+    height: auto;
+    width: 300px;
+    background-color: rgb(198, 205, 205);
+}
+
+
+@media screen and (max-width: 1300px) {
+    .watchlist-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .watchlist-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
