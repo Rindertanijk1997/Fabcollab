@@ -79,6 +79,10 @@
   transform: scale(1.1);
 }
 
+.movie-logo:visited {
+  will-change: contents;
+}
+
 .card_right__logo .ul-logo {
   list-style-type: none;
   padding: 0 0 0 2rem;
@@ -89,4 +93,3 @@
   display: inline;
   padding: 0 1.2rem 0 0;
 }
-
