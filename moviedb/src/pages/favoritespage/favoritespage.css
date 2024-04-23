@@ -11,7 +11,7 @@
 
 .favorite-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     height: 100%;
     width: 100%;
     place-items: center;
@@ -21,4 +21,18 @@
     height: auto;
     width: 300px;
     background-color: rgb(198, 205, 205);
+}
+
+@media screen and (max-width: 1300px) {
+    .favorite-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .favorite-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }

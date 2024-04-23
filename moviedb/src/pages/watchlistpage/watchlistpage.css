@@ -23,3 +23,18 @@
     width: 300px;
     background-color: rgb(198, 205, 205);
 }
+
+
+@media screen and (max-width: 1300px) {
+    .watchlist-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .watchlist-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
