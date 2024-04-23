@@ -5,7 +5,7 @@
 }
 
 .page-card {
-  background-color: #222;
+  background-color: #2c2c30;
   transition: all .5s ease-in-out;
   width: 300px;
   box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
@@ -22,7 +22,7 @@
 }
 
 .page-smallHeading {
-  color: whitesmoke;
+  color: #e0d1be;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
@@ -36,7 +36,7 @@
 .page-button {
   align-self: center;
   background-color: #333;
-  color: whitesmoke;
+  color: #e0d1be;
   border: none;
   padding: 8px 16px;
   cursor: pointer;
