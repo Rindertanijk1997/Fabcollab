@@ -1,10 +1,12 @@
 
 .watchlist-title {
     margin-top: 1rem;
-    color: yellow;
-    font-size: 48px;
+    color: #e3d4bc;
+    font-size: 36px;
     text-align: center;
     letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 

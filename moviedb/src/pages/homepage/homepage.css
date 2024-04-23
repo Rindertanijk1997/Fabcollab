@@ -5,10 +5,11 @@
 }
 
 .homePage-heading {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 2rem;
-    color: whitesmoke;
     margin: 2rem 0 2rem .5rem;
+    color: #e3d4bc;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-

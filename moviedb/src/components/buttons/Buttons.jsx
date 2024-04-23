@@ -5,7 +5,7 @@ function Buttons() {
     return (
         <section className='header-buttons'>
             <Link to="/watchlist-page" className='watchlist'>Watchlist</Link>
-            <Link to="/favorite-page" className='favorit'>Favorit</Link>
+            <Link to="/favorite-page" className='favorit'>Favorites</Link>
         </section>
     );
 }
