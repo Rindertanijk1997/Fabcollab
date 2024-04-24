@@ -7,16 +7,18 @@ function WatchlistPage() {
 
     return (
         <section className='watchlist-wrapper'>
-                <h1 className='watchlist-title'>Movies to watch</h1>
+            <h1 className='watchlist-title'>Movies to watch</h1>
             <article className='watchlist-container'>
                 {watchlist.map(movie => (
-                   <Link className="movie-link" to={`/single-movie-page/${movie.imdbID}`}>
-                    <article key={movie.imdbID} className='watchlist-box'>
-                        <img src={movie.Poster} alt={movie.Title} className='watchlist-box__poster' />
-                        <h2 className='watchlist-box__title'>{movie.Title}</h2>
-                        <h3 className='watchlist-box__year'>{movie.Year}</h3>
-                    </article>
-                    </Link>
+                    <div key={movie.imdbID}>
+                        <Link className="movie-link" to={`/single-movie-page/${movie.imdbID}`}>
+                            <article className='watchlist-box'>
+                                <img src={movie.Poster} alt={movie.Title} className='watchlist-box__poster' />
+                                <h2 className='watchlist-box__title'>{movie.Title}</h2>
+                                <h3 className='watchlist-box__year'>{movie.Year}</h3>
+                            </article>
+                        </Link>
+                    </div>
                 ))}
             </article>
         </section>
