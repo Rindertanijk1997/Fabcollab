@@ -3,7 +3,6 @@ import './asideright.css'
 function AsideRight() {
   return (
     <section className='aside-right__container'>
-        <h3 className='aside-right__title'></h3>
         <article className='logos'>
         <a href="https://tv.apple.com/">
             <img src="src/assets/Apple-TV-macOS-logo.png" alt="logo" />
