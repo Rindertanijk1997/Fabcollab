@@ -37,6 +37,8 @@
 
 .modal-heading {
   color: #e0d1be;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
 }
 
