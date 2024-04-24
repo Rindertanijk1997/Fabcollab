@@ -21,7 +21,6 @@ function FavoritesPage() {
                         <img src={movie.Poster} alt={movie.Title} className='favorite-box__poster' />
                         <h2 className='favorite-box__title'>{movie.Title}</h2>
                         <h3 className='favorite-box__year'>{movie.Year}</h3>
-                        {/*  lägg till mer film info här  */}
                     </article>
                 ))}
             </article>

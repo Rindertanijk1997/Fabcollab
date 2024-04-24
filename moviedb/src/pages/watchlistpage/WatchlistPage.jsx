@@ -6,9 +6,7 @@ function WatchlistPage() {
 
     return (
         <section className='watchlist-wrapper'>
-            <article className='watchlist-title'>
-                <h1>Movies to watch</h1>
-            </article>
+                <h1 className='watchlist-title'>Movies to watch</h1>
             <article className='watchlist-container'>
                 {watchlist.map(movie => (
                     <article key={movie.imdbID} className='watchlist-box'>
