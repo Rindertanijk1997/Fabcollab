@@ -1,15 +1,8 @@
-.aside-right__title {
-    font-size: 22px;
-    margin-top: 1rem;
-    text-align: center;
-    color: white;
-}
-
 .logos img {
     width: auto;
     height: 70px;
     border-radius: 0.5rem;
-    margin-top: 0.1rem;
+    margin-top: 2rem;
 }
 
 .logos img:hover {

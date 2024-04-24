@@ -14,7 +14,7 @@
     height: 100px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 .footer-links img {
@@ -30,22 +30,21 @@
     height: 45px;
 }
 .img-two {
-    margin-left: 1rem;
     height: 45px;
 }
 
 .img-three {
-    height: 100px;
+    height: 45px;
+    background-color: white;
 }
 
 .footer-about {
-    color: whitesmoke;
+    color: #e0d1be;
     width: 300px;
     height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
 }
 
 .footer-about h3 {
@@ -56,7 +55,7 @@
 }
 
 .footer-about p {
-    margin-top: 0.2rem;
+    margin: 0.2rem .2rem 0;
     font-size: 16px;
     letter-spacing: 1px;
     font-family: 'Montserrat', sans-serif;

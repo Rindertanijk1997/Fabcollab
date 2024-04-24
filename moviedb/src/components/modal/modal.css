@@ -15,12 +15,12 @@
 .modal-content {
   padding: 20px;
   width: 700px;
-  background-color: #808080;
+  background-color: #153448;
   border-radius: 0.25rem;
 }
 
 .modal-close {
-  color: white;
+  color: #e0d1be;
   float: right;
   font-size: 2rem;
   font-weight: bold;
@@ -28,7 +28,7 @@
 
 .modal-close:hover,
 .modal-close:focus {
-  color: #444;
+  color: #222;
   text-decoration: none;
   cursor: pointer;
 }
@@ -36,7 +36,9 @@
 
 
 .modal-heading {
-  color: white;
+  color: #e0d1be;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
 }
 

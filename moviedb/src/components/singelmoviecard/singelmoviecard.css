@@ -28,44 +28,44 @@
 .card_right {
   width: 60%;
   float: left;
-  background: #333;
+  background: #2c2c30;
   height: 470px;
   border-radius: 0 10px 10px 0;
 }
 
 .movie-info__title {
-  color: white;
+  color: #e0d1be;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   text-align: left;
   font-size: 40px;
-  margin: 30px 0 0 0;
-  padding: 0 0 0 40px;
+  margin: 2rem 0 0 0;
+  padding: 0 0 0 2rem;
   letter-spacing: 1px;
 }
 
 .card_right__details ul {
   list-style-type: none;
-  padding: 0 0 0 40px;
-  margin: 10px 0 0 0;
+  padding: 0 0 0 2rem;
+  margin: 1rem 0 0 0;
 }
 
 .card_right__details ul li {
   display: inline;
-  color: #e3e3e3;
+  color: #e0d1be;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 14px;
-  padding: 0 40px 0 0;
+  padding: 0 3rem 0 0;
 }
 
 .movie-description {
-  color: white;
+  color: #e0d1be;
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
-  padding: 0 40px;
+  padding: 0 2rem;
   letter-spacing: 1px;
-  margin: 10px 0;
+  margin: 1rem 0;
   line-height: 20px;
 }
 
@@ -79,9 +79,13 @@
   transform: scale(1.1);
 }
 
+.movie-logo:visited {
+  will-change: contents;
+}
+
 .card_right__logo .ul-logo {
   list-style-type: none;
-  padding: 0 0 0 2.4rem;
+  padding: 0 0 0 2rem;
   margin: 1rem 0 0 0;
 }
 
@@ -89,4 +93,3 @@
   display: inline;
   padding: 0 1.2rem 0 0;
 }
-
