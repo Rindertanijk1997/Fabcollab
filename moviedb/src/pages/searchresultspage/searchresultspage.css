@@ -1,8 +1,10 @@
 .searchlist__title {
     margin-top: 2rem;
     text-align: center;
-    color: rgb(232, 232, 227);
-    font-size: 42px;
+    color: #e3d4bc;
+    font-size: 36px;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
     margin-bottom: 1rem;
 }
 
@@ -69,15 +71,7 @@
 .searchPage-logo {
     cursor: pointer;
     height: 30px;
-    margin-bottom: 0.5rem;
-}
-
-.logoheart {
-    margin-left: .7rem;
-}
-
-.searchPage-logo :visited {
-    color: aliceblue;
+    margin: 0 .3rem 0 0;
 }
 
 .searchPage-logo:hover {
